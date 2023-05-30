@@ -1,21 +1,23 @@
 # Summit 2023 - GitOps Workshop Guide
 
-## Local development
+## Local Development
+
+Build and view the guide locally using Docker/Podman:
 
 [source,bash]
 ----
-podman build -t localhost/summit-2023-lab-guide .
-podman run --rm --name guides -d -p 4000:8080 localhost/summit-2023-lab-guide
+podman build -t localhost/summit-2023-gitops-lab-guide .
+podman run --rm --name guides -d -p 4000:8080 localhost/summit-2023-gitops-lab-guide
 ----
 
 ## Deploy to OpenShift
 
 [source,bash]
 ----
-oc new-app https://github.com/evanshortiss/rht-summit-2023-lab-guide --strategy=docker
-oc create route edge rht-summit-2023-lab-guide --service=rht-summit-2023-lab-guide
+oc new-app https://github.com/redhat-scholars/summit-2023-gitops-lab-guide --strategy=docker
+oc create route edge summit-2023-gitops-lab-guide --service=summit-2023-gitops-lab-guide
 # To rebuild after changes pushed to git
-oc start-build rht-summit-2023-lab-guide --follow
+oc start-build summit-2023-gitops-lab-guide --follow
 ----
 
 ## Lab Environment Setup

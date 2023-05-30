@@ -6,7 +6,7 @@
 
 In this section you're no longer acting as a cluster administrator, but are instead playing the role of a developer. Time to stretch your developer legs as the `foo` user, and have Argo CD continuously deploy an application of yours into the development environment that was setup in prior sections.
 
-The application you'll be using can be found at https://github.com/evanshortiss/rht-summit-2023-sample-application[github.com/evanshortiss/rht-summit-2023-sample-application]. This repository contains a simple web application that renders a web page containing a randomly chosen meme. The repository also contains a set of resources in the _k8s/_ directory that will be used to deploy the application on OpenShift. You're going to deploy this application into the `project-memes-dev` namespace, then make an update to the application Git repository that runs a CI pipeline, and observe how Argo CD detects the new changes and automatically deploys them to complete the CI/CD flow.
+The application you'll be using can be found at https://github.com/redhat-scholars/summit-2023-gitops-lab-sample-application[github.com/redhat-scholars/summit-2023-gitops-lab-sample-application]. This repository contains a simple web application that renders a web page containing a randomly chosen meme. The repository also contains a set of resources in the _k8s/_ directory that will be used to deploy the application on OpenShift. You're going to deploy this application into the `project-memes-dev` namespace, then make an update to the application Git repository that runs a CI pipeline, and observe how Argo CD detects the new changes and automatically deploys them to complete the CI/CD flow.
 
 image:ex8.architecture.png[]
 
@@ -40,7 +40,7 @@ image:ex8.argocd-project-settings.png[]
 
 Create an Argo CD Application to manage your containerised random meme web application:
 
-. Visit the https://github.com/evanshortiss/rht-summit-2023-sample-application[random-meme application repository].
+. Visit the https://github.com/redhat-scholars/summit-2023-gitops-lab-sample-application[random-meme application repository].
 . Click the *Use this template* button, and select *Create a new repository* from the list of options that are displayed.
 +
 image:ex8.gh-use-template.png[]

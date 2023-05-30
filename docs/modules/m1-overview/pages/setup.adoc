@@ -14,7 +14,7 @@ The next two sections will walk you through getting access to these resources.
 You'll need a GitHub account to complete this step. If you don't have one, go ahead and sign-up at https://github.com[github.com], then complete these steps:
 
 . Login to https://github.com[github.com].
-. Visit the workshop repository at: https://github.com/evanshortiss/rht-summit-2023-gitops-cluster-mgmt[github.com/evanshortiss/rht-summit-2023-gitops-cluster-mgmt]
+. Visit the workshop repository at: https://github.com/redhat-scholars/summit-2023-gitops-cluster-mgmt[github.com/redhat-scholars/summit-2023-gitops-cluster-mgmt]
 . Click the **Use this template** button in the upper-right corner of the Git repository. A list of options will be displayed.
 . Select the *Create a new repository* option.
 . Use the following value for the the *Repository name* field:
@@ -28,7 +28,7 @@ rht-summit-2023-gitops-cluster-mgmt
 
 [IMPORTANT]
 ====
-You'll be asked to use this repository throughout the workshop. Make sure to always use *your copy*, and *not* the original one owned by _evanshortiss_ on GitHub!
+You'll be asked to use this repository throughout the workshop. Make sure to always use *your copy*, and *not* the original one owned by _redhat-scholars_ on GitHub!
 ====
 
 Ensure your copy of the repository is linked to in subsequent sections of this guide:
