@@ -17,3 +17,12 @@ oc create route edge rht-summit-2023-lab-guide --service=rht-summit-2023-lab-gui
 # To rebuild after changes pushed to git
 oc start-build rht-summit-2023-lab-guide --follow
 ----
+
+## Lab Environment Setup
+
+1. This is a single-tenant lab. Each user requires their own OpenShift cluster.
+1. Each cluster must be running OpenShift 4.12 cluster, and have the **Web Terminal** and **Red Hat OpenShift GitOps** operators installed in their default configurations.
+1. After installeding the Web Terminal operator, edit the _DevWorkspaceTemplate_ resource to use the following image `quay.io/evanshortiss/summit-2023-web-terminal-tooling:latest`.
+1. Lab users must have access to a user with `cluster-admin` permissions.
+1. Lab users must have access to a `foo` user with no assigned permissions, and the password `foopassword`.
+
