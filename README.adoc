@@ -1,6 +1,4 @@
-# (Archived) Summit 2023 - GitOps Workshop Guide
-
-Please use the new copy of this content at: https://github.com/redhat-scholars/summit-2023-gitops-lab-sample-application
+# Summit 2023 - GitOps Workshop Guide
 
 ## Local development
 
