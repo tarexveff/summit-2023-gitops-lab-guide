@@ -1,6 +1,6 @@
-# Red Hat Summit 2023: GitOps Workshop Overview
+# GitOps Workshop Overview
 
-Welcome to Red Hat Summit 2023, and the *Using GitOps to Control and Customize your Red Hat OpenShift Clusters and Applications* workshop!
+Welcome to the *Using GitOps to Control and Customize your Red Hat OpenShift Clusters and Applications* workshop!
 
 This workshop provides you with your own *Red Hat OpenShift* cluster, and set of exercises that teach you how to use *Red Hat OpenShift GitOps* to manage aspects of your *Red Hat OpenShift* cluster and containerised applications.
 
