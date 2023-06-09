@@ -1,8 +1,26 @@
 # Summit 2023 - GitOps Workshop Guide
 
-## Local Development
+## Lab Environment Setup
 
-Build and view the guide locally using Docker/Podman:
+### Using RHPD (demo.redhat.com)
+
+This lab is designed to use environments provided by https://demo.redhat.com/catalog?search=gitops&item=babylon-catalog-prod%2Fsandboxes-gpte.ocp4-control-customize-apps.prod[this catalog item on demo.redhat.com]. Provision thar catalog item with the workshop interface enabled, then direct your users to the instructions at https://redhat-scholars.github.io/summit-2023-gitops-lab-guide/[redhat-scholars.github.io/summit-2023-gitops-lab-guide]!
+
+### Using your own Environment
+
+. This is a single-tenant lab. Each lab attendee requires their own OpenShift cluster.
+. The lab is tested with clusters running OpenShift 4.12, that have the stable channel of both the **Web Terminal** and **Red Hat OpenShift GitOps** operators installed in their default configurations.
+. After installing the Web Terminal operator, edit the _DevWorkspaceTemplate_ resource named `web-terminal-tooling` in the `openshift-operators` to use the following image: `quay.io/evanshortiss/summit-2023-web-terminal-tooling:latest`.
+. Lab attendees must have access to a user with `cluster-admin` permissions. In the instructions this is the `opentlc-mgr` that's provided by the `htpasswd` OAuth identity provider. You can read more about identity providers in the https://docs.openshift.com/container-platform/4.12/authentication/understanding-identity-provider.html[OpenShift Documentation]. 
+. Lab users must have access to a `foo` user with no assigned permissions, and the password `foopassword`. In the lab instructions this is provided by the `standard-users` OAuth provider.
+
+## Develop and Host the Lab Guide
+
+This is only necessary if the hosted version available at https://redhat-scholars.github.io/summit-2023-gitops-lab-guide/[redhat-scholars.github.io/summit-2023-gitops-lab-guide] isn't accessible, or needs tweaks for your lab.
+
+### Local Guide Development Build
+
+Build and view the lab guide locally using Docker/Podman:
 
 [source,bash]
 ----
@@ -10,7 +28,9 @@ podman build -t localhost/summit-2023-gitops-lab-guide .
 podman run --rm --name guides -d -p 4000:8080 localhost/summit-2023-gitops-lab-guide
 ----
 
-## Deploy to OpenShift
+### Build and Deploy Guide on OpenShift
+
+Deploy the lab guide on OpenShift using the `oc` CLI:
 
 [source,bash]
 ----
@@ -19,12 +39,3 @@ oc create route edge summit-2023-gitops-lab-guide --service=summit-2023-gitops-l
 # To rebuild after changes pushed to git
 oc start-build summit-2023-gitops-lab-guide --follow
 ----
-
-## Lab Environment Setup
-
-. This is a single-tenant lab. Each user requires their own OpenShift cluster.
-. The lab is tested with clusters running OpenShift 4.12, that have the stable channel of both the **Web Terminal** and **Red Hat OpenShift GitOps** operators installed in their default configurations.
-. After installing the Web Terminal operator, edit the _DevWorkspaceTemplate_ resource named `web-terminal-tooling` in the `openshift-operators` to use the following image: `quay.io/evanshortiss/summit-2023-web-terminal-tooling:latest`.
-. Lab attendees must have access to a user with `cluster-admin` permissions. In the instructions this is the `opentlc-mgr` that's provided by the `htpasswd` OAuth identity provider. You can read more about identity providers in the https://docs.openshift.com/container-platform/4.12/authentication/understanding-identity-provider.html[OpenShift Documentation]. 
-. Lab users must have access to a `foo` user with no assigned permissions, and the password `foopassword`. In the lab instructions this is provided by the `standard-users` OAuth provider.
-
