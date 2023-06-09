@@ -4,9 +4,11 @@
 
 ### Using RHPD (demo.redhat.com)
 
-This lab is designed to use environments provided by https://demo.redhat.com/catalog?search=gitops&item=babylon-catalog-prod%2Fsandboxes-gpte.ocp4-control-customize-apps.prod[this catalog item on demo.redhat.com]. Provision thar catalog item with the workshop interface enabled, then direct your users to the instructions at https://redhat-scholars.github.io/summit-2023-gitops-lab-guide/[redhat-scholars.github.io/summit-2023-gitops-lab-guide]!
+This lab is designed to use environments provided by https://demo.redhat.com/catalog?search=gitops&item=babylon-catalog-prod%2Fsandboxes-gpte.ocp4-control-customize-apps.prod[this catalog item on demo.redhat.com]. Provision that catalog item with the workshop interface enabled, then direct your users to the instructions at https://redhat-scholars.github.io/summit-2023-gitops-lab-guide/[this link]!
 
 ### Using your own Environment
+
+An Ansible role/task that performs much of the necessary setup can be found at https://github.com/redhat-cop/agnosticd/blob/development/ansible/roles_ocp_workloads/ocp4_workload_gitops_cluster_mgmt_workshop/tasks/workload.yml[this link].
 
 . This is a single-tenant lab. Each lab attendee requires their own OpenShift cluster.
 . The lab is tested with clusters running OpenShift 4.12, that have the stable channel of both the **Web Terminal** and **Red Hat OpenShift GitOps** operators installed in their default configurations.
