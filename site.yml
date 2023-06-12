@@ -13,6 +13,8 @@ asciidoc:
   attributes:
     experimental: true
     page-pagination: true
+  extensions:
+  - ./lib/tabs.js
 
 ui:
   bundle:

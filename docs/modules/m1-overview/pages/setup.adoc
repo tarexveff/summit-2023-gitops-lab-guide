@@ -44,20 +44,29 @@ You should now have a copy of the repository at a unique URL of your own at `htt
 
 == Access your OpenShift Cluster
 
+You'll be using your own OpenShift cluster throughout this workshop. Your cluster will be configured with the **OpenShift Web Terminal** and **Red Hat OpenShift GitOps** Operators. You can think of Operators as addons to an OpenShift or Kubernetes cluster that provide it with extended features/capabilities:
+
+    * The **Web Terminal** makes it easy to use pre-authenticated command-line tools (CLIs) to interact with the OpenShift APIs directly from the **OpenShift Web Console** in your web browser.
+    * The **Red Hat OpenShift GitOps** operator provides a managed an Argo CD instance on OpenShift.
+
+[tabs, subs="attributes+,+macros"]	
+====	
+OpenShift (Provided by a Workshop Host)::	
++	
+--
+If you're attending this workshop as part of a hosted session, then continue reading this section. If you need to self-host an environment for this workshop then switch to the *Custom OpenShift* tab.
+
 You'll be using your own OpenShift cluster throughout this workshop. Your cluster is pre-configured with the **OpenShift Web Terminal** and **Red Hat OpenShift GitOps** Operators. You can think of Operators as addons to an OpenShift or Kubernetes cluster that provide it with extended features/capabilities:
 
     * The **Web Terminal** makes it easy to use pre-authenticated command-line tools (CLIs) to interact with the OpenShift APIs directly from the **OpenShift Web Console** in your web browser.
     * Pre-installing the **Red Hat OpenShift GitOps** operator saved a few minutes of time so you can fully focus on actually learning about GitOps instead of setting it up!
 
-To retrieve your cluster's information:
+You likely already accessed these instructions via a unique https://demo.redhat.com[demo.redhat.com] URL, e.g `https://demo.redhat.com/workshop/$WORKSHOP_ID`. If so, return to that URL and:
 
-. Visit the https://summit.demo.redhat.com[summit.demo.redhat.com].
-. Enter your email address and the password provided by the workshop administrator(s).
+. Enter your email address, and the password provided by the workshop administrator(s).
 +
 [IMPORTANT]
-====
 Use your actual email address. This is so you can use the same email and password again to access your cluster information if you lose access, or forget the cluster details.
-====
 +
 image:ex1.demo-redhat-login.png[]
 . Click the *Access this workshop* button.
@@ -72,9 +81,20 @@ To access your OpenShift cluster's *Web Console*:
 . Visit the cluster URL in a web browser, and select the *htpasswd_provider* login option when prompted.
 +
 image:ex1.openshift-login-screen.png[]
-. Login to your OpenShift cluster using the *Admin* username and password provided by https://summit.demo.redhat.com[summit.demo.redhat.com].
+. Login to your OpenShift cluster using the *Admin* username and password provided by the https://demo.redhat.com[demo.redhat.com] page.
 
 The **Overview** page of the OpenShift Web Console is displayed after a successful login. From here you can perform both administrative and developer-focused tasks. 
+--	
+Custom OpenShift::	
++	
+--
+
+Use the instructions in the https://github.com/redhat-scholars/summit-2023-gitops-lab-guide#lab-environment-setup[Using your own Environment section of this repository] to prepare your OpenShift environment for this workshop.
+
+Move onto the next section once the OpenShift environment has been configured.
+
+--	
+====
 
 == Access the OpenShift Web Terminal
 
