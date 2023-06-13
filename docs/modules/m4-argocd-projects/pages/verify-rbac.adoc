@@ -6,7 +6,7 @@
 
 == Explore your new Applications and Project with Custom RBAC
 
-Before moving on and seeing the effects of the newly synced Application resources, review the https://github.com/%USERID%/rht-summit-2023-gitops-cluster-mgmt/blob/main/rbac/groups/group.developers.yaml[group.developers.yaml] and https://github.com/%USERID%/rht-summit-2023-gitops-cluster-mgmt/blob/main/rbac/groups/group.operations.yaml[group.operations.yaml] files. These are simple Group CRs that define a list of Users that are part of a Group.
+Before moving on and seeing the effects of the newly synced Application resources, review the https://github.com/%USERID%/rht-summit-2023-gitops-cluster-mgmt/blob/main/rbac/groups/group.developers.yaml[group.developers.yaml] and https://github.com/%USERID%/rht-summit-2023-gitops-cluster-mgmt/blob/main/rbac/groups/group.operations.yaml[group.operations.yaml] files. These are simple Group CRs that define a list of Users that are part of the named Group.
 
 [NOTE]
 ====
@@ -35,10 +35,10 @@ image::ex7.argocd-project-yaml.png[]
 
 This file is synchronised from the _https://github.com/%USERID%/rht-summit-2023-gitops-cluster-mgmt/blob/main/argocd-projects/app-project.memes.yaml[argocd-projects/app-project.memes.yaml]_ in your Git repository - it's important and contains various comments explaining what it does! The main thing to take away is that it:
 
-* Creates an https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#projects[AppProject].
-* Supports multiple `destinations` (target clusters), though there's only one defined in this example; the local cluster into which it has been applied.
-* Limits the target Namespaces to `project-memes-dev` and `project-memes-prod`, and *does not* whitelist any cluster-scoped resources. This is important; we want to restrict this project to managing only resources in a the defined Namespaces and not at the cluster-level!
-* Defines two roles: `memes-development` and `memes-operations`. Users in the `application-dev` and `application-ops` Groups created previously are associated with these, respectively.
+* Creates an https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#projects[AppProject], i.e a Project in Argo CD.
+* Supports multiple `destinations` (target clusters and namespaces), though there's only one defined in this example; the local cluster into which it has been applied.
+* Limits the target Namespaces to `project-memes-dev` and `project-memes-prod`, and *does not* whitelist any cluster-scoped resources. This is important; we want to restrict this Project to managing only resources in the defined Namespaces and not at the cluster-level!
+* Defines two roles: `memes-development` and `memes-operations`. Users in the `application-dev` and `application-ops` Groups created previously are associated with these, respectively. Effectively you're creating a mapping between Argo CD policies and Groups of OpenShift users.
 * Defines independent RBAC policies for the `memes-development` and `memes-operations` roles.
 
 Now that the *rbac* and *argo-projects* Application resources are synchronised, verify they had the desired effect.

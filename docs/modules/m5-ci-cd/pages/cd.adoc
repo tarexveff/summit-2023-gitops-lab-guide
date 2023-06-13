@@ -33,6 +33,8 @@ You can further confirm that the new ConfigMap has been synchronised by:
 
 image:ex8.argocd-live-manifest.png[]
 
+You can also refresh the meme application in your web browser to confirm the new image is displayed. Note that the meme application reads the new images defined in the ConfigMpa once per minute, so be patient if your new meme isn't displayed immediately.
+
 == Summary
 
 Congratulations! You learned how to:

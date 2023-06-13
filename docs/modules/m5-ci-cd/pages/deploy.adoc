@@ -12,7 +12,7 @@ image:ex8.architecture.png[]
 
 [NOTE]
 ====
-Separating the OpenShift/Kubernetes resources and source code for an application into separate repositories is a common approach. To reduce the number of repositories you need to manage this workshop has placed both the source code and OpenShift/Kubernetes resources together in a single repository.
+Separating the OpenShift/Kubernetes resources and source code for an application into separate repositories is a common approach. To reduce the number of repositories you need to manage, this workshop has placed both the source code and OpenShift/Kubernetes resources together in a single repository.
 ====
 
 == Login to Argo CD as a Developer User

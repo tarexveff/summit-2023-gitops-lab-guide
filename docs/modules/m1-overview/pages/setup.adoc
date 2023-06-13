@@ -17,6 +17,8 @@ You'll need a GitHub account to complete this step. If you don't have one, go ah
 . Visit the workshop repository at: https://github.com/redhat-scholars/summit-2023-gitops-cluster-mgmt[github.com/redhat-scholars/summit-2023-gitops-cluster-mgmt]
 . Click the **Use this template** button in the upper-right corner of the Git repository. A list of options will be displayed.
 . Select the *Create a new repository* option.
++
+image::ex1.use-template.png[]
 . Use the following value for the the *Repository name* field:
 +
 [.console-input]
@@ -55,11 +57,6 @@ OpenShift (Provided by a Workshop Host)::
 +	
 --
 If you're attending this workshop as part of a hosted session, then continue reading this section. If you need to self-host an environment for this workshop then switch to the *Custom OpenShift* tab.
-
-You'll be using your own OpenShift cluster throughout this workshop. Your cluster is pre-configured with the **OpenShift Web Terminal** and **Red Hat OpenShift GitOps** Operators. You can think of Operators as addons to an OpenShift or Kubernetes cluster that provide it with extended features/capabilities:
-
-    * The **Web Terminal** makes it easy to use pre-authenticated command-line tools (CLIs) to interact with the OpenShift APIs directly from the **OpenShift Web Console** in your web browser.
-    * Pre-installing the **Red Hat OpenShift GitOps** operator saved a few minutes of time so you can fully focus on actually learning about GitOps instead of setting it up!
 
 You likely already accessed these instructions via a unique https://demo.redhat.com[demo.redhat.com] URL, e.g `https://demo.redhat.com/workshop/$WORKSHOP_ID`. If so, return to that URL and:
 
