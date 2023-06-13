@@ -12,7 +12,7 @@ An Ansible role/task that performs much of the necessary setup can be found at h
 
 . This is a single-tenant lab. Each lab attendee requires their own OpenShift cluster.
 . The lab is tested with clusters running OpenShift 4.12, that have the stable channel of both the **Web Terminal** and **Red Hat OpenShift GitOps** operators installed in their default configurations.
-. After installing the Web Terminal operator, edit the _DevWorkspaceTemplate_ resource named `web-terminal-tooling` in the `openshift-operators` to use the following image: `quay.io/evanshortiss/summit-2023-web-terminal-tooling:latest`.
+. After installing the Web Terminal operator, edit the _DevWorkspaceTemplate_ resource named `web-terminal-tooling` in the `openshift-operators` Namespace to use the following image: `quay.io/evanshortiss/summit-2023-web-terminal-tooling:latest`.
 . Lab attendees must have access to a user with `cluster-admin` permissions. In the instructions this is the `opentlc-mgr` that's provided by the `htpasswd` OAuth identity provider. You can read more about identity providers in the https://docs.openshift.com/container-platform/4.12/authentication/understanding-identity-provider.html[OpenShift Documentation]. 
 . Lab users must have access to a `foo` user with no assigned permissions, and the password `foopassword`. In the lab instructions this is provided by the `standard-users` OAuth provider.
 
