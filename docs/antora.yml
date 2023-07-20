@@ -1,5 +1,5 @@
 name: summit-2023-gitops-workshop-guide
-title: Summit 2023 - GitOps Workshop Guide
+title: GitOps Workshop Guide
 version: main
 nav:
   - modules/m1-overview/nav.adoc

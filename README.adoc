@@ -1,4 +1,4 @@
-# Summit 2023 - GitOps Workshop Guide
+# Using GitOps to control and customize your OpenShift clusters and applications
 
 ## Lab Environment Setup
 

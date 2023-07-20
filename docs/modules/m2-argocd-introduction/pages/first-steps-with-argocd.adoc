@@ -77,7 +77,7 @@ Try changing the message in the Console Notification and committing it to your r
 . Click the edit icon in the top-right corner.
 +
 image:ex2.gh-file-view.png[]
-. Edit the `spec.text` to read `Fáilte chuig Red Hat Summit 2023!`, or a similar message of your choosing.
+. Edit the `spec.text` to read `Fáilte chuig Red Hat Labs!`, or a similar message of your choosing.
 +
 image:ex2.gh-file-edit.png[]
 . Click the **Commit Changes...** button in the top-right.

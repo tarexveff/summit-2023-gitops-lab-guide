@@ -14,7 +14,7 @@ ARG GITHUB_SHA=none
 LABEL org.opencontainers.image.created="$CREATED_AT"
 LABEL org.opencontainers.image.revision="$GITHUB_SHA"
 
-LABEL org.opencontainers.image.title="Summit 2023 GitOps Workshop Guide"
+LABEL org.opencontainers.image.title="Using GitOps Workshop Guide"
 LABEL org.opencontainers.image.description="A httpd container that serve the workshop guide."
 LABEL org.opencontainers.image.url="https://demo.redhat.com"
 LABEL org.opencontainers.image.source="git@github.com:redhat-scholars/summit-2023-gitops-lab-guide"

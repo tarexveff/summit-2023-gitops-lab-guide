@@ -1,7 +1,7 @@
 runtime:
   cache_dir: ./.cache/antora
 site:
-  title: Summit 2023 - GitOps Workshop Guide
+  title: GitOps Workshop Guide
   start_page: summit-2023-gitops-workshop-guide:m1-overview:intro.adoc
 
 content:
