@@ -40,7 +40,7 @@ A Namespace is already defined in the _https://github.com/%USERID%/rht-summit-20
 . Create a *file* named `kustomization.yaml` inside your _managed-namespaces/overlays/project-memes-prod_ folder.
 +
 image::ex4.github-ide.png[]
-. Place the following content in _managed-namespaces/overlays/project-memes-prod/kustomization.yaml_. This will use the base files, but replace the default Namespace value and double the ResourceQuota values:
+. Place the following content in _managed-namespaces/overlays/project-memes-prod/kustomization.yaml_. This content is similar to the base files, but has a different Namespace value and doubles the ResourceQuota values:
 +
 [.console-input]
 [source,yaml]
