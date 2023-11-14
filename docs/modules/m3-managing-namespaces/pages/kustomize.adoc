@@ -36,10 +36,6 @@ A Namespace is already defined in the _https://github.com/%USERID%/rht-summit-20
 . Navigate to https://github.com/%USERID%/rht-summit-2023-gitops-cluster-mgmt/[the root, window=_blank] your copy of the GitHub repository.
 . Press the period/dot key to open GitHub's web-based editor.
 +
-[IMPORTANT]
-====
-The period/dot key shortcut will only work from the root of the GitHub repository.
-====
 . Create a *folder* named `project-memes-prod` inside the _managed-namespaces/overlays/_ folder. This folder will contain your Namespace configuration.
 . Create a *file* named `kustomization.yaml` inside your _managed-namespaces/overlays/project-memes-prod_ folder.
 +
